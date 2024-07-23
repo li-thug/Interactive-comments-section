@@ -1,0 +1,94 @@
+.add-reply-wrapper {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: var(--neutral-white);
+    border-radius: 10px;
+}
+
+.add-reply-grid-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "input input input"
+        "photo .... button"    
+    ;
+    gap: 1rem;
+}
+
+.add-reply-cureent-user-profile-photo-box {
+    grid-area: photo;
+}
+
+.add-reply-cureent-user-profile-photo {
+    width: 2.5rem;
+}
+
+.add-reply-input-box {
+    grid-area: input;
+    position: relative;
+}
+
+.text-area-label {
+    position: absolute;
+    top: 0.7rem;
+    left: 1rem;
+    cursor:text;
+}
+
+.add-reply-input {
+    width: 100%;
+    height: 90px;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--font-family-rubik);
+    border: 1px solid var(--neutral-light-gray);
+    resize: none;
+}
+
+.add-reply-input::-webkit-scrollbar {
+    width: 0;
+}
+
+.add-reply-input:focus {
+    outline: 1px solid var(--primary-moderate-blue);
+    border: none;
+}
+
+.add-reply-btn-box {
+    grid-area: button;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.add-reply-btn {
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.8rem;
+    font-family: var(--font-family-rubik);
+    color: var(--neutral-white);
+    font-size: 1rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: var(--primary-moderate-blue);
+    cursor: pointer;
+}
+
+.add-reply-btn:hover {
+    background-color: var(--primary-light-grayish-blue);
+}
+
+@media (min-width: 786px) {
+    .add-reply-wrapper {
+        padding: 1.5rem;
+    }
+    .add-reply-grid-box {
+        display: grid;
+        grid-template-columns: min-content 1fr min-content;
+        grid-template-areas: 
+            "photo input button"
+        ;
+        gap: 1rem;
+    }
+}

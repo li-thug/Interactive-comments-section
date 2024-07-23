@@ -1,0 +1,265 @@
+.user-comment-wrapper {
+    margin-bottom: 1rem;
+}
+
+.user-comment-box {
+    background-color: var(--neutral-white);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "userInfo userInfo userInfo userInfo"
+        "userComment userComment userComment userComment"
+        "score score reply reply";
+}
+
+
+
+.user-comment-user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    grid-area: userInfo;
+}
+
+.user-comment-profile-photo {
+    width: 2rem;
+}
+
+.user-comment-user-name {
+    color: var(--neutral-dark-blue);
+    font-weight: var(--font-weight-700);
+}
+
+.user-comment-current-user {
+    background-color: var(--primary-moderate-blue);
+    color: var(--neutral-white);
+    padding: 0.2rem 0.3rem;
+}
+
+.user-comment-created-at {
+    color: var(--neutral-grayish-blue);
+}
+
+.user-comment-edit-input-wrapper {
+    grid-area: userComment;
+}
+
+.user-comment-edit-input-box {
+    margin-bottom: 0.5rem;
+}
+
+.user-comment-edit-input {
+    width: 100%;
+    height: 90px;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--font-family-rubik);
+    border: 1px solid var(--neutral-light-gray);
+    resize: none;
+}
+
+.user-comment-edit-input::-webkit-scrollbar {
+    width: 0;
+}
+
+.user-comment-edit-input:focus {
+    outline: 1px solid var(--primary-moderate-blue);
+    border: none;
+}
+
+
+.user-comment-edit-btn-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-comment-edit-btn {
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.8rem;
+    font-family: var(--font-family-rubik);
+    color: var(--neutral-white);
+    font-size: 1rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: var(--primary-moderate-blue);
+    cursor: pointer;
+}
+
+.user-comment-edit-btn:hover {
+    background-color: var(--primary-light-grayish-blue);
+}
+
+.user-comment-user-comment {
+    color: var(--neutral-grayish-blue);
+    grid-area: userComment;
+    line-height: 1.350;
+}
+
+.user-comment-score-wrapper {
+    grid-area: score;
+}
+
+.user-comment-score-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--neutral-very-light-gray);
+    width: 6rem;
+    border-radius: 10px;
+
+}
+
+.user-comment-plus-box,
+.user-comment-minus-box {
+    padding: 0.8rem 0.8rem;
+    display: flex;
+    cursor: pointer;
+}
+
+.user-comment-plus-box:hover svg path,
+.user-comment-minus-box:hover svg path {
+    fill: var(--primary-moderate-blue);
+}
+
+.user-comment-score {
+    color: var(--primary-moderate-blue);
+    font-weight: var(--font-weight-500);
+}
+
+.user-comment-delete-edit-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: reply;
+    gap: 1rem;
+}
+
+.user-comment-delete-box,
+.user-comment-edit-box{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: var(--font-weight-500);
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+
+}
+.user-comment-delete-box:hover svg path {
+    fill: var(--primary-pale-red);
+}
+
+.user-comment-delete-box:hover .user-comment-delete-text {
+    color: var(--primary-pale-red);
+}
+
+.user-comment-edit-box:hover svg path {
+    fill: var(--primary-light-grayish-blue);
+}
+
+.user-comment-edit-box:hover .user-comment-edit-text {
+    color: var(--primary-light-grayish-blue);
+}
+
+
+.user-comment-delete-text {
+    color: var(--primary-soft-red);
+}
+
+.user-comment-edit-text {
+    color: var(--primary-moderate-blue);
+
+}
+
+.user-comment-reply-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    grid-area: reply;
+}
+
+.user-comment-reply-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 5rem;
+    justify-content: flex-end;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.user-comment-reply-box:hover svg path {
+    fill: var(--primary-light-grayish-blue);
+}
+
+.user-comment-reply-box:hover .user-comment-reply-text {
+    color: var(--primary-light-grayish-blue);
+}
+
+.user-comment-reply-text {
+    color: var(--primary-moderate-blue);
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-500);
+    text-transform: capitalize;
+}
+
+@media (min-width: 786px) {
+    .user-comment-box {
+        padding: 1.5rem;
+        grid-template-columns: 2.5rem 1fr 5rem;
+        grid-template-areas:
+            "score userInfo userInfo reply"
+            "score userComment userComment userComment"
+    }
+
+    .user-comment-profile-photo {
+        width: 2.5rem;
+    }
+
+    .user-comment-user-comment {
+        padding-right: 1rem;
+    }
+
+    .user-comment-score-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--neutral-very-light-gray);
+        border-radius: 10px;
+        width: 2.5rem;
+    }
+    
+    .user-comment-plus-box,
+    .user-comment-minus-box {
+        padding: 1rem 0.8rem;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 360px) {
+    .user-comment-user-info {
+        gap: 0.5rem;
+    }
+    .user-comment-created-at {
+        font-size: 0.9rem;
+    }
+    .user-comment-score-box {
+        width: 5rem;
+    }
+    .user-comment-delete-box,
+    .user-comment-edit-box {
+        font-size: 1rem;
+    }
+    .user-comment-reply-box {
+        font-size: 1rem;
+    }
+}
